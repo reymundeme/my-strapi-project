@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_sections_section2s",
+  "info": {
+    "displayName": "section2"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "buttonURL": {
+      "type": "string"
+    },
+    "buttonText_2": {
+      "type": "string"
+    },
+    "buttonURL_2": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

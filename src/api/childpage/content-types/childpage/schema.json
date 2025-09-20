@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "childpages",
+  "info": {
+    "singularName": "childpage",
+    "pluralName": "childpages",
+    "displayName": "Childpage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "seoTitle": {
+      "type": "string"
+    },
+    "seoDescription": {
+      "type": "text"
+    },
+    "canonicalUrl": {
+      "type": "string"
+    },
+    "keywords": {
+      "type": "json"
+    },
+    "ogImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "jsonLd": {
+      "type": "json"
+    },
+    "page": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::page.page",
+      "inversedBy": "childpages"
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.hero",
+        "sections.section1",
+        "sections.section2",
+        "sections.text-center",
+        "sections.text-left",
+        "sections.item-section"
+      ]
+    }
+  }
+}

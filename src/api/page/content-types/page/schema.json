@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "seoTitle": {
+      "type": "string"
+    },
+    "seoDescription": {
+      "type": "string"
+    },
+    "canonicalUrl": {
+      "type": "string"
+    },
+    "keywords": {
+      "type": "json"
+    },
+    "ogImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "jsonLd": {
+      "type": "json"
+    },
+    "childpages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::childpage.childpage",
+      "mappedBy": "page"
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.hero",
+        "sections.section1",
+        "sections.section2",
+        "sections.text-center",
+        "sections.text-left",
+        "sections.item-section"
+      ]
+    }
+  }
+}
